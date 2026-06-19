@@ -217,12 +217,12 @@ Silakan buat Fork, lakukan perubahan, dan kirimkan Pull Request (PR) ke reposito
 ## 📜 Lisensi
 Proyek ini dilisensikan di bawah **MIT License**. Lihat berkas lisensi untuk detail selengkapnya.
 
-MIT © 2024 - 2026 [IHx-cmyk](https://github.com/IHx-cmyk)
+MIT © 2026 [IHx-cmyk](https://github.com/IHx-cmyk)
 
 ---
 
 <div align="center">
 
-**Dibuat dengan 💖 dan ☕ untuk komunitas Termux**
+**Dibuat seadanya. Modal sebatang rokok dan seglintir harapan user Termux**
 
 </div>
