@@ -5,7 +5,7 @@ set -e
 
 REPO="IHx-cmyk/jolt"
 BINARY="jolt"
-VERSION="v0.1.0"
+VERSION="v0.2.0"
 
 # Warna
 RED='\033[0;31m'
