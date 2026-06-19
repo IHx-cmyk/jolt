@@ -1,0 +1,36 @@
+# 📝 Changelog
+
+Semua pembaruan penting untuk proyek **Jolt** akan didokumentasikan di berkas ini.
+
+---
+
+## [v0.2.0] - 2026-06-19
+### ⚡ Fitur Baru
+* **Watch Mode (`--watch` / `-w`)**: Mengizinkan auto-reload runtime saat ada perubahan berkas `.js` atau `.json` di direktori proyek.
+  * Jalankan dengan: `jolt run index.js --watch` atau `jolt run index.js -w`.
+* **Auto Pemuatan File `.env`**: Jolt secara otomatis mencari, mengurai (parse), dan menyuntikkan variabel dari berkas `.env` di direktori aktif ke dalam environment variables saat startup runtime.
+  * Dapat dibaca via `os.getenv("VARIABLE_NAME")`.
+
+### 📦 CommonJS Loader & Module Scope
+* **CJS Wrapping**: Pembungkusan kode JavaScript dengan standard module wrapper `(function(exports, require, module, __filename, __dirname) { ... })` agar variable antar file tidak bocor ke global scope.
+* **Relative Path Loading**: Pemuatan modul menggunakan local relative path (`require('./helper')` atau `require('../config')`).
+* **JSON File Loading**: Mengimpor berkas `.json` secara langsung menggunakan `require()`.
+* **Built-in Module Interception**: Panggilan `require('os')`, `require('fs')`, `require('net')`, dan `require('console')` diarahkan otomatis ke modul bawaan internal.
+
+### 🔧 Perbaikan & Peningkatan
+* **Repository Fix**: Memperbaiki berkas `.gitignore` agar biner rilis `/jolt` tidak menyembunyikan direktori source code `cmd/jolt/`.
+* **Auto-deploy Metadata**: Integrasi Open Graph image preview (`jolt.jpg`) untuk metadata link preview website.
+* **Responsive Website**: Desain web dokumentasi disempurnakan agar sepenuhnya responsif pada perangkat mobile (Termux screen size).
+
+---
+
+## [v0.1.0] - 2026-06-19
+### ⚡ Rilis Awal (Initial Release)
+* **Goja JavaScript Engine**: Pemuatan runtime berbasis Goja (interpreter JavaScript murni dalam bahasa Go) yang ringan untuk Termux Android.
+* **Centralized Package Manager**: Perintah `jolt add <package>` mengunduh paket npm terpusat ke direktori global `~/.jolt/packages/` untuk menghemat memori penyimpanan.
+* **Built-in Core Modules**:
+  * `console` (logging berwarna)
+  * `fs` (file system sinkron)
+  * `net` (HTTP client `fetch`)
+  * `os` (akses OS, argumen CLI, environment)
+* **Interactive Project Init**: Perintah `jolt init` untuk membuat berkas `package.json` secara interaktif di terminal.

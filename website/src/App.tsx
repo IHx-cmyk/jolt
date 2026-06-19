@@ -12,6 +12,7 @@ const pageOrder: PageItem[] = [
   { key: 'project', title: 'Struktur' },
   { key: 'modules', title: 'Modules' },
   { key: 'roadmap', title: 'Roadmap' },
+  { key: 'changelog', title: 'Changelog' },
   { key: 'contributing', title: 'Kontribusi' }
 ]
 
@@ -796,6 +797,65 @@ export default function App() {
                   </div>
                   <h4 className="timeline-title">Optimalisasi Performa Ekstrem</h4>
                   <p className="timeline-desc">Refactoring total arsitektur runtime Jolt untuk performa eksekusi dan efisiensi memori yang ekstrem.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+
+      case 'changelog':
+        return (
+          <div className="doc">
+            <h1 className="doc-title">Changelog</h1>
+            <p className="lede">Catatan rilis dan riwayat pembaruan runtime Jolt.</p>
+
+            <div className="changelog-list">
+              <div className="changelog-version">
+                <div className="changelog-header">
+                  <h2 className="changelog-ver-title">v0.2.0</h2>
+                  <span className="changelog-date">19 Juni 2026</span>
+                  <span className="changelog-badge latest">Terbaru</span>
+                </div>
+                <div className="changelog-content">
+                  <p>Rilis versi minor ini memperkenalkan Watch Mode untuk auto-reload saat pengembangan, dukungan pemuatan berkas <code>.env</code> secara bawaan, serta penyempurnaan pembungkusan module CommonJS untuk standardisasi scope yang lebih baik.</p>
+                  
+                  <h4 className="changelog-section-name">⚡ Fitur Baru</h4>
+                  <ul>
+                    <li><strong>Watch Mode (<code>--watch</code> / <code>-w</code>)</strong>: Jalankan skrip dengan <code>jolt run index.js --watch</code> untuk otomatis merestart runtime setiap kali ada berkas <code>.js</code> atau <code>.json</code> yang berubah.</li>
+                    <li><strong>Dukungan File <code>.env</code></strong>: Jolt secara otomatis membaca berkas <code>.env</code> pada direktori aktif saat startup dan memasukkannya ke variabel lingkungan sistem.</li>
+                  </ul>
+
+                  <h4 className="changelog-section-name">📦 CommonJS & Loader</h4>
+                  <ul>
+                    <li><strong>Standard Scope Wrapping</strong>: Kode JavaScript sekarang dibungkus dalam CJS standard module wrapper <code>(function(exports, require, module, __filename, __dirname) &#123; ... &#125;)</code>, memisahkan variabel module scope secara bersih.</li>
+                    <li><strong>Relative Require & JSON</strong>: Mendukung require relative path (<code>./</code> dan <code>../</code>) serta pembacaan file JSON langsung (<code>require('./data.json')</code>).</li>
+                    <li><strong>Built-in Interceptor</strong>: Penggunaan <code>require('os')</code>, <code>require('fs')</code>, dll., sekarang otomatis diarahkan ke global module bawaan.</li>
+                  </ul>
+
+                  <h4 className="changelog-section-name">🔧 Perbaikan & Lain-lain</h4>
+                  <ul>
+                    <li><strong>Fix Git Ignore</strong>: Memperbaiki aturan ignore pada repositori agar tidak mengabaikan folder source code utama <code>cmd/</code>.</li>
+                    <li><strong>Custom Domain</strong>: Pemutakhiran metadata dokumentasi dan deployment dengan custom domain.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="changelog-version">
+                <div className="changelog-header">
+                  <h2 className="changelog-ver-title">v0.1.0</h2>
+                  <span className="changelog-date">19 Juni 2026</span>
+                  <span className="changelog-badge">Initial Release</span>
+                </div>
+                <div className="changelog-content">
+                  <p>Rilis fondasi utama dari runtime interpreter JavaScript Jolt untuk perangkat Termux Android.</p>
+                  
+                  <h4 className="changelog-section-name">⚡ Fitur Utama</h4>
+                  <ul>
+                    <li><strong>Engine Goja</strong>: Pemuatan interpreter JavaScript murni berbasis Go yang sangat cepat saat startup dibandingkan V8 Node.js pada perangkat mobile.</li>
+                    <li><strong>Centralized Package Manager (<code>jolt add</code>)</strong>: Pemasangan dependensi npm secara terpusat di direktori global pengguna (<code>~/.jolt/packages/</code>) sehingga tidak memerlukan folder <code>node_modules</code> raksasa di setiap folder proyek.</li>
+                    <li><strong>Built-in Modules</strong>: Menyertakan modul dasar <code>console</code> (log berwarna), <code>fs</code> (akses filesystem), <code>net</code> (fetch HTTP request), dan <code>os</code> (akses environment/arguments).</li>
+                    <li><strong>Interactive CLI</strong>: Interface inisialisasi interaktif via <code>jolt init</code>.</li>
+                  </ul>
                 </div>
               </div>
             </div>
