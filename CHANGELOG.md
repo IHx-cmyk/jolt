@@ -4,6 +4,11 @@ Semua pembaruan penting untuk proyek **Kilat** akan didokumentasikan di berkas i
 
 ---
 
+## [v0.3.0] - 2026-06-19
+### ⚡ Fitur Baru
+* **REPL Interaktif (Interactive Shell)**: Menjalankan runtime `kilat` tanpa argumen atau `kilat repl` akan meluncurkan interpreter interaktif JavaScript di terminal.
+* **Global Require di REPL**: Dukungan penuh pemanggilan `require()` untuk modul lokal maupun built-in langsung dari konsol REPL.
+
 ## [v0.2.0] - 2026-06-19
 ### ⚡ Fitur Baru
 * **Watch Mode (`--watch` / `-w`)**: Mengizinkan auto-reload runtime saat ada perubahan berkas `.js` atau `.json` di direktori proyek.

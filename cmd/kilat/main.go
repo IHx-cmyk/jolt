@@ -9,6 +9,7 @@ import (
 	"kilat/internal/pkgmanager"
 	"kilat/internal/utils"
 	"kilat/internal/initcmd"
+	"kilat/internal/repl"
 	"github.com/fatih/color"
 )
 
@@ -22,7 +23,7 @@ func main() {
 	}
 
 	if len(os.Args) < 2 {
-		printHelp()
+		repl.Start()
 		return
 	}
 
@@ -64,6 +65,8 @@ func main() {
 			color.Red("❌ Gagal install: %v", err)
 			os.Exit(1)
 		}
+	case "repl":
+		repl.Start()
 	case "init":
 		if err := initcmd.RunInit(); err != nil {
 			color.Red("❌ Gagal init: %v", err)

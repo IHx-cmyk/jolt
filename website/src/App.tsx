@@ -289,7 +289,7 @@ export default function App() {
                 <pre>
                   <code>
                     <span className="sh-prompt">$</span>kilat --version{"\n"}
-                    <span className="sh-out">Kilat v0.2.0</span>
+                    <span className="sh-out">Kilat v0.3.0</span>
                   </code>
                 </pre>
               </div>
@@ -728,24 +728,24 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="timeline-item active">
+              <div className="timeline-item done">
                 <div className="timeline-dot"></div>
                 <div className="timeline-card">
                   <div className="timeline-meta">
                     <span className="timeline-ver">v0.3.0</span>
-                    <span className="timeline-status active">Pengerjaan</span>
+                    <span className="timeline-status done">Selesai</span>
                   </div>
                   <h4 className="timeline-title">REPL Interaktif</h4>
                   <p className="timeline-desc">Menambahkan antarmuka interaktif Kilat console langsung di dalam shell Termux untuk pengujian ekspresi JavaScript secara langsung.</p>
                 </div>
               </div>
 
-              <div className="timeline-item">
+              <div className="timeline-item active">
                 <div className="timeline-dot"></div>
                 <div className="timeline-card">
                   <div className="timeline-meta">
                     <span className="timeline-ver">v0.4.0</span>
-                    <span className="timeline-status planned">Rencana</span>
+                    <span className="timeline-status active">Pengerjaan</span>
                   </div>
                   <h4 className="timeline-title">Built-In HTTP Server</h4>
                   <p className="timeline-desc">Implementasi HTTP server internal terintegrasi berkecepatan tinggi mirip dengan <code>Bun.serve</code>.</p>
@@ -812,9 +812,26 @@ export default function App() {
             <div className="changelog-list">
               <div className="changelog-version">
                 <div className="changelog-header">
-                  <h2 className="changelog-ver-title">v0.2.0</h2>
+                  <h2 className="changelog-ver-title">v0.3.0</h2>
                   <span className="changelog-date">19 Juni 2026</span>
                   <span className="changelog-badge latest">Terbaru</span>
+                </div>
+                <div className="changelog-content">
+                  <p>Rilis versi minor ini memperkenalkan <strong>REPL Interaktif</strong> bawaan. Pengguna kini dapat berinteraksi dan mencoba kode JavaScript langsung dari shell Termux tanpa membuat file terpisah.</p>
+                  
+                  <h4 className="changelog-section-name">⚡ Fitur Baru</h4>
+                  <ul>
+                    <li><strong>REPL Interaktif (<code>repl</code>)</strong>: Menjalankan perintah <code>kilat</code> tanpa argumen atau <code>kilat repl</code> akan meluncurkan interactive shell JavaScript.</li>
+                    <li><strong>Global Module Require</strong>: Dukungan pemanggilan <code>require()</code> module di dalam REPL.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="changelog-version">
+                <div className="changelog-header">
+                  <h2 className="changelog-ver-title">v0.2.0</h2>
+                  <span className="changelog-date">19 Juni 2026</span>
+                  <span className="changelog-badge">Lama</span>
                 </div>
                 <div className="changelog-content">
                   <p>Rilis versi minor ini memperkenalkan Watch Mode untuk auto-reload saat pengembangan, dukungan pemuatan berkas <code>.env</code> secara bawaan, serta penyempurnaan pembungkusan module CommonJS untuk standardisasi scope yang lebih baik.</p>
@@ -929,7 +946,7 @@ export default function App() {
       <nav className="navbar">
         <div className="nav-container">
           <a href="#index" className="logo">
-            <span className="logo-spark">⚡</span> kilat <span className="logo-badge">v0.2.0</span>
+            <span className="logo-spark">⚡</span> kilat <span className="logo-badge">v0.3.0</span>
           </a>
 
           {/* Desktop nav links */}

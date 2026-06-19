@@ -177,3 +177,31 @@ func resolvePath(currentDir, moduleName string) (string, error) {
 
 	return "", fmt.Errorf("file '%s' tidak ditemukan", moduleName)
 }
+
+func (r *Runtime) VM() *goja.Runtime {
+	return r.vm
+}
+
+func (r *Runtime) SetGlobalRequire(currentDir string) {
+	requireFunc := func(call goja.FunctionCall) goja.Value {
+		if len(call.Arguments) < 1 {
+			panic(r.vm.ToValue("require() expects 1 argument"))
+		}
+		moduleName := call.Arguments[0].String()
+		
+		if moduleName == "os" || moduleName == "fs" || moduleName == "net" || moduleName == "console" {
+			return r.vm.Get(moduleName)
+		}
+		
+		resolved, err := resolvePath(currentDir, moduleName)
+		if err != nil {
+			panic(r.vm.NewGoError(err))
+		}
+		val, err := r.loadModule(resolved)
+		if err != nil {
+			panic(r.vm.NewGoError(err))
+		}
+		return val
+	}
+	r.vm.Set("require", requireFunc)
+}
