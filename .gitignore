@@ -1,11 +1,11 @@
 # Compiled binaries
-/jolt
-/jolt-linux-arm64
-/jolt-linux-amd64
-/jolt-linux-armv7
+/kilat
+/kilat-linux-arm64
+/kilat-linux-amd64
+/kilat-linux-armv7
 
 # Local package manager cache
-.jolt/
+.kilat/
 
 # Logs & temp files
 *.log

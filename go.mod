@@ -1,4 +1,4 @@
-module jolt
+module kilat
 
 go 1.25.0
 

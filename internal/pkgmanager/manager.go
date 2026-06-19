@@ -11,7 +11,7 @@ import (
 	"github.com/fatih/color"
 )
 
-const installDir = ".jolt/packages"
+const installDir = ".kilat/packages"
 
 type PackageJSON struct {
 	Name            string            `json:"name"`
@@ -88,6 +88,6 @@ func Add(pkgName string) error {
 	s.Stop()
 	elapsed := time.Since(startTime).Round(time.Second)
 	color.Green("✅ %s@%s berhasil diinstall (selesai dalam %s)", pkgName, latestVersion, elapsed)
-	color.Cyan("   📦 Lokasi: .jolt/packages/%s", pkgName)
+	color.Cyan("   📦 Lokasi: .kilat/packages/%s", pkgName)
 	return nil
 }

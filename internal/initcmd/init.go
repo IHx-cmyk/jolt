@@ -37,7 +37,7 @@ func RunInit() error {
 	dir, _ := os.Getwd()
 	defaultName := filepath.Base(dir)
 
-	color.Cyan("📦 Inisialisasi proyek Jolt")
+	color.Cyan("📦 Inisialisasi proyek Kilat")
 	fmt.Println()
 
 	fmt.Print("Nama proyek (default: " + defaultName + "): ")
@@ -96,8 +96,8 @@ func RunInit() error {
 	}
 
 	if _, err := os.Stat(main); os.IsNotExist(err) {
-		exampleJS := `// 🚀 Jolt Project: ` + name + `
-console.log("Hello from Jolt!");
+		exampleJS := `// 🚀 Kilat Project: ` + name + `
+console.log("Hello from Kilat!");
 
 const fs = require('fs');
 const os = require('os');
@@ -109,11 +109,11 @@ console.log("Files:", fs.readdirSync("."));
 		color.Green("✅ File %s dibuat", main)
 	}
 
-	color.Green("\n✅ Proyek Jolt berhasil diinisialisasi!")
+	color.Green("\n✅ Proyek Kilat berhasil diinisialisasi!")
 	color.Cyan("   📄 package.json")
 	color.Cyan("   📄 " + main)
 	color.White("\nSelanjutnya, jalankan:")
-	color.Yellow("   jolt run " + main)
+	color.Yellow("   kilat run " + main)
 
 	return nil
 }

@@ -1,10 +1,10 @@
 #!/bin/bash
-# Jolt Installer - Fast JS Runtime for Termux
+# Kilat Installer - Fast JS Runtime for Termux
 
 set -e
 
-REPO="IHx-cmyk/jolt"
-BINARY="jolt"
+REPO="IHx-cmyk/kilat"
+BINARY="kilat"
 VERSION="v0.2.0"
 
 # Warna
@@ -14,7 +14,7 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 NC='\033[0m'
 
-echo -e "${CYAN}${BOLD}⚡ Jolt Installer${NC}"
+echo -e "${CYAN}${BOLD}⚡ Kilat Installer${NC}"
 echo ""
 
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -55,5 +55,5 @@ cd - > /dev/null
 rm -rf "$TMPDIR"
 
 echo ""
-echo -e "${GREEN}✅ Jolt $VERSION berhasil diinstall!${NC}"
-echo -e "${BOLD}Gunakan:${NC} jolt --version"
+echo -e "${GREEN}✅ Kilat $VERSION berhasil diinstall!${NC}"
+echo -e "${BOLD}Gunakan:${NC} kilat --version"

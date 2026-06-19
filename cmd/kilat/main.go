@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 	"time"
-	"jolt/internal/engine"
-	"jolt/internal/pkgmanager"
-	"jolt/internal/utils"
-	"jolt/internal/initcmd"
+	"kilat/internal/engine"
+	"kilat/internal/pkgmanager"
+	"kilat/internal/utils"
+	"kilat/internal/initcmd"
 	"github.com/fatih/color"
 )
 
@@ -17,7 +17,7 @@ func main() {
 	utils.LoadEnv()
 
 	if len(os.Args) == 2 && (os.Args[1] == "--version" || os.Args[1] == "-v") {
-		fmt.Printf("Jolt v%s\n", utils.Version)
+		fmt.Printf("Kilat v%s\n", utils.Version)
 		return
 	}
 
@@ -29,7 +29,7 @@ func main() {
 	switch os.Args[1] {
 	case "run":
 		if len(os.Args) < 3 {
-			color.Red("❌ Gunakan: jolt run <file.js> [--watch]")
+			color.Red("❌ Gunakan: kilat run <file.js> [--watch]")
 			return
 		}
 
@@ -44,7 +44,7 @@ func main() {
 		}
 
 		if filePath == "" {
-			color.Red("❌ Gunakan: jolt run <file.js> [--watch]")
+			color.Red("❌ Gunakan: kilat run <file.js> [--watch]")
 			return
 		}
 
@@ -56,7 +56,7 @@ func main() {
 
 	case "add":
 		if len(os.Args) < 3 {
-			color.Red("❌ Gunakan: jolt add <package>")
+			color.Red("❌ Gunakan: kilat add <package>")
 			return
 		}
 		pkg := os.Args[2]
@@ -106,7 +106,7 @@ func getMaxModTime() time.Time {
 		}
 		if info.IsDir() {
 			name := info.Name()
-			if name == ".git" || name == ".jolt" || name == "node_modules" || name == "website" {
+			if name == ".git" || name == ".kilat" || name == "node_modules" || name == "website" {
 				return filepath.SkipDir
 			}
 			return nil
@@ -124,16 +124,16 @@ func getMaxModTime() time.Time {
 
 func printHelp() {
 	cyan := color.New(color.FgCyan, color.Bold)
-	cyan.Printf("🚀 Jolt v%s - Fast JS Runtime for Termux\n", utils.Version)
+	cyan.Printf("🚀 Kilat v%s - Fast JS Runtime for Termux\n", utils.Version)
 	fmt.Println()
 	color.White("Penggunaan:")
-	color.Yellow("  jolt init                 Inisialisasi proyek Jolt (package.json)")
-	color.Yellow("  jolt run <file.js> [-w]   Jalankan file JavaScript (opsional: watch mode)")
-	color.Yellow("  jolt add <package>        Install package dari npm")
-	color.Yellow("  jolt --version            Tampilkan versi")
+	color.Yellow("  kilat init                 Inisialisasi proyek Kilat (package.json)")
+	color.Yellow("  kilat run <file.js> [-w]   Jalankan file JavaScript (opsional: watch mode)")
+	color.Yellow("  kilat add <package>        Install package dari npm")
+	color.Yellow("  kilat --version            Tampilkan versi")
 	fmt.Println()
 	color.White("Contoh:")
-	color.Cyan("  jolt init")
-	color.Cyan("  jolt run index.js --watch")
-	color.Cyan("  jolt add lodash")
+	color.Cyan("  kilat init")
+	color.Cyan("  kilat run index.js --watch")
+	color.Cyan("  kilat add lodash")
 }

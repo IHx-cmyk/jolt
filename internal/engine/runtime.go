@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"github.com/dop251/goja"
-	"jolt/internal/modules"
+	"kilat/internal/modules"
 )
 
 type Runtime struct {
@@ -143,9 +143,9 @@ func resolvePath(currentDir, moduleName string) (string, error) {
 		targetPath = filepath.Join(currentDir, moduleName)
 	} else {
 		// Global package module resolution
-		baseDir := ".jolt/packages"
+		baseDir := ".kilat/packages"
 		homeDir, _ := os.UserHomeDir()
-		globalDir := filepath.Join(homeDir, ".jolt", "packages")
+		globalDir := filepath.Join(homeDir, ".kilat", "packages")
 
 		possibleDirs := []string{baseDir, globalDir}
 		for _, dir := range possibleDirs {

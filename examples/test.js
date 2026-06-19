@@ -1,1 +1,1 @@
-console.log('Hai Dari Jolt 🔞')
+console.log('Hai Dari Kilat ⚡')

@@ -66,7 +66,7 @@ export default function App() {
                 <span className="hero-badge-dot"></span>
                 dibuat dengan Go + Goja
               </div>
-              <h1 className="hero-heading">Jolt</h1>
+              <h1 className="hero-heading">Kilat</h1>
               <p className="hero-desc">
                 Runtime JavaScript ringan dan cepat untuk Termux. Eksekusi script, install package, dan jalankan proyek — <strong>tanpa node_modules</strong>.
               </p>
@@ -74,7 +74,7 @@ export default function App() {
                 <a href="#installation" className="btn btn-primary">
                   Mulai Instalasi →
                 </a>
-                <a href="https://github.com/IHx-cmyk/jolt" target="_blank" rel="noreferrer" className="btn btn-ghost">
+                <a href="https://github.com/IHx-cmyk/kilat" target="_blank" rel="noreferrer" className="btn btn-ghost">
                   Lihat di GitHub
                 </a>
               </div>
@@ -87,10 +87,10 @@ export default function App() {
                     <span className="term-dot y"></span>
                     <span className="term-dot g"></span>
                   </div>
-                  <span className="term-title">~/projects/hello — jolt</span>
+                  <span className="term-title">~/projects/hello — kilat</span>
                   <button 
                     className="term-copy"
-                    onClick={() => handleCopy('home-term', 'jolt run hello.js')}
+                    onClick={() => handleCopy('home-term', 'kilat run hello.js')}
                   >
                     {copiedTextMap['home-term'] ? 'Copied!' : 'copy'}
                   </button>
@@ -98,8 +98,8 @@ export default function App() {
                 <div className="term-body">
                   <pre>
                     <code>
-                      <span className="sh-prompt">$</span>jolt run hello.js{"\n"}
-                      <span className="sh-out">🚀 Hello from Jolt!{"\n"}</span>
+                      <span className="sh-prompt">$</span>kilat run hello.js{"\n"}
+                      <span className="sh-out">🚀 Hello from Kilat!{"\n"}</span>
                       <span className="sh-out">OS: android{"\n"}</span>
                       <span className="sh-out">Files: [ 'hello.js', 'package.json' ]</span>
                     </code>
@@ -108,7 +108,7 @@ export default function App() {
               </div>
             </div>
 
-            <h2 className="section-title" id="kenapa">Kenapa Jolt?</h2>
+            <h2 className="section-title" id="kenapa">Kenapa Kilat?</h2>
             <div className="grid-container cols-3">
               <div className="grid-card">
                 <div className="card-icon">⚡</div>
@@ -118,7 +118,7 @@ export default function App() {
               <div className="grid-card">
                 <div className="card-icon">📦</div>
                 <h3 className="card-title">Package Manager Bawaan</h3>
-                <p className="card-desc">Cukup gunakan perintah <code>jolt add &lt;package&gt;</code> — tidak memerlukan npm atau yarn terpisah.</p>
+                <p className="card-desc">Cukup gunakan perintah <code>kilat add &lt;package&gt;</code> — tidak memerlukan npm atau yarn terpisah.</p>
               </div>
               <div className="grid-card">
                 <div className="card-icon">🔌</div>
@@ -128,7 +128,7 @@ export default function App() {
               <div className="grid-card">
                 <div className="card-icon">📁</div>
                 <h3 className="card-title">Tanpa node_modules</h3>
-                <p className="card-desc">Dependency disimpan rapi terpusat di <code>.jolt/packages</code>, membebaskan space proyek Anda.</p>
+                <p className="card-desc">Dependency disimpan rapi terpusat di <code>.kilat/packages</code>, membebaskan space proyek Anda.</p>
               </div>
               <div className="grid-card">
                 <div className="card-icon">🔄</div>
@@ -137,13 +137,13 @@ export default function App() {
               </div>
               <div className="grid-card">
                 <div className="card-icon">🛠️</div>
-                <h3 className="card-title">jolt init</h3>
+                <h3 className="card-title">kilat init</h3>
                 <p className="card-desc">Mulai proyek baru lengkap dengan package.json lewat satu instruksi CLI interaktif.</p>
               </div>
             </div>
 
             <h2 className="section-title" id="tanpa-beban">Tanpa Beban node_modules</h2>
-            <p>Konsep pemetaan dependency Jolt dibanding package manager Node.js standar:</p>
+            <p>Konsep pemetaan dependency Kilat dibanding package manager Node.js standar:</p>
             <div className="comparison-section">
               <div className="comp-box bad">
                 <div className="comp-header">
@@ -159,8 +159,8 @@ export default function App() {
               </div>
               <div className="comp-box good">
                 <div className="comp-header">
-                  <span>.jolt/packages/ (Jolt)</span>
-                  <span>punya Jolt (global)</span>
+                  <span>.kilat/packages/ (Kilat)</span>
+                  <span>punya Kilat (global)</span>
                 </div>
                 <div className="comp-body">
                   <div className="comp-row">lodash <span className="comp-bar"><i style={{ width: '20%' }}></i></span></div>
@@ -176,18 +176,18 @@ export default function App() {
             <h2 className="section-title" id="mulai">Mulai dalam 3 Langkah</h2>
             <div className="grid-container cols-3">
               <div className="grid-card" style={{ textAlign: 'center' }}>
-                <h3 className="card-title">1. Pasang Jolt</h3>
+                <h3 className="card-title">1. Pasang Kilat</h3>
                 <p className="card-desc" style={{ marginBottom: '14px' }}>Unduh binary rilis otomatis.</p>
                 <a href="#installation" className="btn btn-ghost" style={{ fontSize: '12px', padding: '6px 12px' }}>Instalasi →</a>
               </div>
               <div className="grid-card" style={{ textAlign: 'center' }}>
                 <h3 className="card-title">2. Init Proyek</h3>
-                <p className="card-desc" style={{ marginBottom: '14px' }}><code>jolt init</code> untuk configurasi.</p>
+                <p className="card-desc" style={{ marginBottom: '14px' }}><code>kilat init</code> untuk configurasi.</p>
                 <a href="#usage" className="btn btn-ghost" style={{ fontSize: '12px', padding: '6px 12px' }}>Penggunaan →</a>
               </div>
               <div className="grid-card" style={{ textAlign: 'center' }}>
                 <h3 className="card-title">3. Jalankan</h3>
-                <p className="card-desc" style={{ marginBottom: '14px' }}><code>jolt run index.js</code>.</p>
+                <p className="card-desc" style={{ marginBottom: '14px' }}><code>kilat run index.js</code>.</p>
                 <a href="#usage" className="btn btn-ghost" style={{ fontSize: '12px', padding: '6px 12px' }}>Contoh →</a>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Instalasi</h1>
-            <p className="lede">Dua cara memasang Jolt di Termux: unduh binary rilis otomatis (direkomendasikan) atau compile sendiri dari source code.</p>
+            <p className="lede">Dua cara memasang Kilat di Termux: unduh binary rilis otomatis (direkomendasikan) atau compile sendiri dari source code.</p>
 
             <h2 className="section-title">Instalasi Otomatis (Rekomendasi)</h2>
             <p>Metode tercepat. Skrip instalasi di bawah akan mendeteksi arsitektur CPU Android Anda secara otomatis (ARM64, AMD64, atau ARMv7) dan mengunduh binary executable yang sesuai.</p>
@@ -213,7 +213,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('inst-auto', 'curl -fsSL https://raw.githubusercontent.com/IHx-cmyk/jolt/main/install.sh | bash')}
+                  onClick={() => handleCopy('inst-auto', 'curl -fsSL https://raw.githubusercontent.com/IHx-cmyk/kilat/main/install.sh | bash')}
                 >
                   {copiedTextMap['inst-auto'] ? 'Copied!' : 'copy'}
                 </button>
@@ -222,7 +222,7 @@ export default function App() {
                 <pre>
                   <code>
                     <span className="sh-comment"># Jalankan perintah ini di aplikasi Termux Anda</span>{"\n"}
-                    <span className="sh-prompt">$</span>curl -fsSL https://raw.githubusercontent.com/IHx-cmyk/jolt/main/install.sh | bash
+                    <span className="sh-prompt">$</span>curl -fsSL https://raw.githubusercontent.com/IHx-cmyk/kilat/main/install.sh | bash
                   </code>
                 </pre>
               </div>
@@ -247,7 +247,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('inst-source', 'git clone https://github.com/IHx-cmyk/jolt\ncd jolt\ngo build -o jolt ./cmd/jolt\nmv jolt $PREFIX/bin/')}
+                  onClick={() => handleCopy('inst-source', 'git clone https://github.com/IHx-cmyk/kilat\ncd kilat\ngo build -o kilat ./cmd/kilat\nmv kilat $PREFIX/bin/')}
                 >
                   {copiedTextMap['inst-source'] ? 'Copied!' : 'copy'}
                 </button>
@@ -256,19 +256,19 @@ export default function App() {
                 <pre>
                   <code>
                     <span className="sh-comment"># Clone repositori resmi</span>{"\n"}
-                    <span className="sh-prompt">$</span>git clone https://github.com/IHx-cmyk/jolt{"\n"}
-                    <span className="sh-prompt">$</span>cd jolt{"\n\n"}
+                    <span className="sh-prompt">$</span>git clone https://github.com/IHx-cmyk/kilat{"\n"}
+                    <span className="sh-prompt">$</span>cd kilat{"\n\n"}
                     <span className="sh-comment"># Build source code ke binary</span>{"\n"}
-                    <span className="sh-prompt">$</span>go build -o jolt ./cmd/jolt{"\n\n"}
+                    <span className="sh-prompt">$</span>go build -o kilat ./cmd/kilat{"\n\n"}
                     <span className="sh-comment"># Pindahkan binary ke directory path Termux</span>{"\n"}
-                    <span className="sh-prompt">$</span>mv jolt $PREFIX/bin/
+                    <span className="sh-prompt">$</span>mv kilat $PREFIX/bin/
                   </code>
                 </pre>
               </div>
             </div>
 
             <h2 className="section-title">Verifikasi Instalasi</h2>
-            <p>Ketik perintah versi berikut untuk menguji apakah command path Jolt sudah dikenali:</p>
+            <p>Ketik perintah versi berikut untuk menguji apakah command path Kilat sudah dikenali:</p>
 
             <div className="term-window">
               <div className="term-bar">
@@ -280,7 +280,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('inst-ver', 'jolt --version')}
+                  onClick={() => handleCopy('inst-ver', 'kilat --version')}
                 >
                   {copiedTextMap['inst-ver'] ? 'Copied!' : 'copy'}
                 </button>
@@ -288,8 +288,8 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt --version{"\n"}
-                    <span className="sh-out">Jolt v0.2.0</span>
+                    <span className="sh-prompt">$</span>kilat --version{"\n"}
+                    <span className="sh-out">Kilat v0.2.0</span>
                   </code>
                 </pre>
               </div>
@@ -308,10 +308,10 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Penggunaan & Contoh</h1>
-            <p className="lede">Dari inisialisasi folder proyek baru hingga memanggil dependensi pustaka luar. Berikut panduan harian runtime Jolt.</p>
+            <p className="lede">Dari inisialisasi folder proyek baru hingga memanggil dependensi pustaka luar. Berikut panduan harian runtime Kilat.</p>
 
             <h2 className="section-title">Inisialisasi Proyek</h2>
-            <p>Gunakan perintah <code>jolt init</code> untuk membuat struktur proyek standar. Perintah ini akan meluncurkan setup interaktif untuk menulis konfigurasi <code>package.json</code> serta memproduksi entry point <code>index.js</code>.</p>
+            <p>Gunakan perintah <code>kilat init</code> untuk membuat struktur proyek standar. Perintah ini akan meluncurkan setup interaktif untuk menulis konfigurasi <code>package.json</code> serta memproduksi entry point <code>index.js</code>.</p>
             
             <div className="term-window">
               <div className="term-bar">
@@ -323,7 +323,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('usage-init', 'jolt init')}
+                  onClick={() => handleCopy('usage-init', 'kilat init')}
                 >
                   {copiedTextMap['usage-init'] ? 'Copied!' : 'copy'}
                 </button>
@@ -331,8 +331,8 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt init{"\n"}
-                    <span className="sh-out">? Nama proyek: hello-jolt{"\n"}</span>
+                    <span className="sh-prompt">$</span>kilat init{"\n"}
+                    <span className="sh-out">? Nama proyek: hello-kilat{"\n"}</span>
                     <span className="sh-out">? Versi: 1.0.0{"\n"}</span>
                     <span className="sh-out">? Entry point: index.js{"\n"}</span>
                     <span className="sh-out">✔ package.json dibuat{"\n"}</span>
@@ -343,7 +343,7 @@ export default function App() {
             </div>
 
             <h2 className="section-title">Menjalankan File JavaScript</h2>
-            <p>Perintah <code>jolt run &lt;namafile.js&gt;</code> memuat file JavaScript Anda ke dalam mesin interpretasi Goja:</p>
+            <p>Perintah <code>kilat run &lt;namafile.js&gt;</code> memuat file JavaScript Anda ke dalam mesin interpretasi Goja:</p>
 
             <div className="term-window">
               <div className="term-bar">
@@ -355,7 +355,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('usage-run', 'jolt run index.js')}
+                  onClick={() => handleCopy('usage-run', 'kilat run index.js')}
                 >
                   {copiedTextMap['usage-run'] ? 'Copied!' : 'copy'}
                 </button>
@@ -363,7 +363,7 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt run index.js
+                    <span className="sh-prompt">$</span>kilat run index.js
                   </code>
                 </pre>
               </div>
@@ -382,7 +382,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('usage-add', 'jolt add lodash')}
+                  onClick={() => handleCopy('usage-add', 'kilat add lodash')}
                 >
                   {copiedTextMap['usage-add'] ? 'Copied!' : 'copy'}
                 </button>
@@ -390,7 +390,7 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt add lodash
+                    <span className="sh-prompt">$</span>kilat add lodash
                   </code>
                 </pre>
               </div>
@@ -399,7 +399,7 @@ export default function App() {
             <div className="callout-box">
               <div className="callout-tag">[info]</div>
               <div className="callout-text">
-                Ingin mengunci versi tertentu? Tambahkan tanda <code>@</code> pada nama package, seperti: <code>jolt add lodash@4</code>
+                Ingin mengunci versi tertentu? Tambahkan tanda <code>@</code> pada nama package, seperti: <code>kilat add lodash@4</code>
               </div>
             </div>
 
@@ -416,7 +416,7 @@ export default function App() {
                 <span className="term-title">hello.js</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('code-hello', 'console.log("🚀 Hello from Jolt!");\nconst fs = require(\'fs\');\nconst os = require(\'os\');\nconsole.log("OS:", os.getenv("OSTYPE") || "unknown");\nconsole.log("Files:", fs.readdirSync("."));')}
+                  onClick={() => handleCopy('code-hello', 'console.log("🚀 Hello from Kilat!");\nconst fs = require(\'fs\');\nconst os = require(\'os\');\nconsole.log("OS:", os.getenv("OSTYPE") || "unknown");\nconsole.log("Files:", fs.readdirSync("."));')}
                 >
                   {copiedTextMap['code-hello'] ? 'Copied!' : 'copy'}
                 </button>
@@ -426,7 +426,7 @@ export default function App() {
                   <code>
                     <span className="sh-keyword">const</span> fs = <span className="sh-func">require</span>(<span className="sh-string">'fs'</span>);{"\n"}
                     <span className="sh-keyword">const</span> os = <span className="sh-func">require</span>(<span className="sh-string">'os'</span>);{"\n\n"}
-                    <span className="sh-func">console.log</span>(<span className="sh-string">"🚀 Hello from Jolt!"</span>);{"\n"}
+                    <span className="sh-func">console.log</span>(<span className="sh-string">"🚀 Hello from Kilat!"</span>);{"\n"}
                     <span className="sh-func">console.log</span>(<span className="sh-string">"OS:"</span>, os.getenv(<span className="sh-string">"OSTYPE"</span>) || <span className="sh-string">"unknown"</span>);{"\n"}
                     <span className="sh-func">console.log</span>(<span className="sh-string">"Files:"</span>, fs.readdirSync(<span className="sh-string">"."</span>));
                   </code>
@@ -434,7 +434,7 @@ export default function App() {
               </div>
             </div>
 
-            <p>2. Jalankan berkas menggunakan CLI runtime Jolt:</p>
+            <p>2. Jalankan berkas menggunakan CLI runtime Kilat:</p>
             <div className="term-window">
               <div className="term-bar">
                 <div className="term-dots">
@@ -445,7 +445,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('code-run-hello', 'jolt run hello.js')}
+                  onClick={() => handleCopy('code-run-hello', 'kilat run hello.js')}
                 >
                   {copiedTextMap['code-run-hello'] ? 'Copied!' : 'copy'}
                 </button>
@@ -453,13 +453,13 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt run hello.js
+                    <span className="sh-prompt">$</span>kilat run hello.js
                   </code>
                 </pre>
               </div>
             </div>
 
-            <p>3. Contoh menggunakan dependensi npm <code>lodash</code> setelah diunduh (<code>jolt add lodash</code>):</p>
+            <p>3. Contoh menggunakan dependensi npm <code>lodash</code> setelah diunduh (<code>kilat add lodash</code>):</p>
             <div className="term-window">
               <div className="term-bar">
                 <div className="term-dots">
@@ -492,10 +492,10 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Struktur Proyek & Package Manager</h1>
-            <p className="lede">Bagaimana repositori Jolt disusun, dan bagaimana dependency-nya dikelola di balik layar secara terpusat.</p>
+            <p className="lede">Bagaimana repositori Kilat disusun, dan bagaimana dependency-nya dikelola di balik layar secara terpusat.</p>
 
-            <h2 className="section-title">Struktur Folder Jolt</h2>
-            <p>Berikut tata letak modul internal source code Jolt di GitHub. Ini berguna jika Anda berniat memodifikasi runtime Jolt:</p>
+            <h2 className="section-title">Struktur Folder Kilat</h2>
+            <p>Berikut tata letak modul internal source code Kilat di GitHub. Ini berguna jika Anda berniat memodifikasi runtime Kilat:</p>
 
             <div className="term-window">
               <div className="term-bar">
@@ -504,18 +504,18 @@ export default function App() {
                   <span className="term-dot y"></span>
                   <span className="term-dot g"></span>
                 </div>
-                <span className="term-title">jolt project tree</span>
+                <span className="term-title">kilat project tree</span>
               </div>
               <div className="term-body">
                 <pre>
                   <code>
-                    jolt/{"\n"}
-                    ├── cmd/jolt/main.go          <span className="sh-comment"># Entry point CLI Go</span>{"\n"}
+                    kilat/{"\n"}
+                    ├── cmd/kilat/main.go          <span className="sh-comment"># Entry point CLI Go</span>{"\n"}
                     ├── internal/{"\n"}
                     │   ├── engine/                <span className="sh-comment"># Goja runtime & wrapper system require()</span>{"\n"}
                     │   ├── modules/                <span className="sh-comment"># Core module built-in (console, fs, net, os)</span>{"\n"}
                     │   ├── pkgmanager/              <span className="sh-comment"># CLI npm fetcher, zip parser & caching</span>{"\n"}
-                    │   ├── init/                    <span className="sh-comment"># Setup perintah jolt init</span>{"\n"}
+                    │   ├── init/                    <span className="sh-comment"># Setup perintah kilat init</span>{"\n"}
                     │   └── utils/                   <span className="sh-comment"># Spinner, progress bar & logging warna</span>{"\n"}
                     ├── examples/                    <span className="sh-comment"># Sampel javascript test</span>{"\n"}
                     ├── go.mod{"\n"}
@@ -526,7 +526,7 @@ export default function App() {
             </div>
 
             <h2 className="section-title">Bagaimana Package Manager Bekerja</h2>
-            <p>Jika Node.js meletakkan ribuan file pustaka terduplikasi di setiap folder proyek, Jolt mengusung pendekatan modern:</p>
+            <p>Jika Node.js meletakkan ribuan file pustaka terduplikasi di setiap folder proyek, Kilat mengusung pendekatan modern:</p>
             <div className="grid-container cols-2">
               <div className="grid-card">
                 <h3 className="card-title">package.json Kompatibel</h3>
@@ -534,11 +534,11 @@ export default function App() {
               </div>
               <div className="grid-card">
                 <h3 className="card-title">Penyimpanan Terpusat</h3>
-                <p className="card-desc">Semua dependency diinstal satu kali pada direktori global <code>~/.jolt/packages/</code>.</p>
+                <p className="card-desc">Semua dependency diinstal satu kali pada direktori global <code>~/.kilat/packages/</code>.</p>
               </div>
               <div className="grid-card">
                 <h3 className="card-title">Intersepsi require()</h3>
-                <p className="card-desc">Saat interpreter memuat require('module'), Jolt mendeteksi folder cache pusat dan memuatnya secara instan.</p>
+                <p className="card-desc">Saat interpreter memuat require('module'), Kilat mendeteksi folder cache pusat dan memuatnya secara instan.</p>
               </div>
               <div className="grid-card">
                 <h3 className="card-title">Efisiensi I/O Android</h3>
@@ -552,10 +552,10 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Module Bawaan & Testing</h1>
-            <p className="lede">Daftar API inti built-in bawaan Jolt yang dapat langsung Anda panggil tanpa instalasi, serta panduan pengujian package.</p>
+            <p className="lede">Daftar API inti built-in bawaan Kilat yang dapat langsung Anda panggil tanpa instalasi, serta panduan pengujian package.</p>
 
             <h2 className="section-title">Referensi API Core</h2>
-            <p>Jolt menyediakan standard library internal untuk mengelola console, memproses file, melakukan koneksi internet, dan membaca shell.</p>
+            <p>Kilat menyediakan standard library internal untuk mengelola console, memproses file, melakukan koneksi internet, dan membaca shell.</p>
 
             <div className="table-wrapper">
               <table className="doc-table">
@@ -585,7 +585,7 @@ export default function App() {
                   <tr>
                     <td><code>fs.writeFileSync(path, str)</code></td>
                     <td>Menulis file teks string secara sinkron.</td>
-                    <td><code>fs.writeFileSync('w.txt', 'Jolt')</code></td>
+                    <td><code>fs.writeFileSync('w.txt', 'Kilat')</code></td>
                   </tr>
                   <tr>
                     <td><code>fs.readdirSync(dir)</code></td>
@@ -629,7 +629,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('mod-test-install', 'jolt add chalk')}
+                  onClick={() => handleCopy('mod-test-install', 'kilat add chalk')}
                 >
                   {copiedTextMap['mod-test-install'] ? 'Copied!' : 'copy'}
                 </button>
@@ -637,7 +637,7 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt add chalk
+                    <span className="sh-prompt">$</span>kilat add chalk
                   </code>
                 </pre>
               </div>
@@ -654,7 +654,7 @@ export default function App() {
                 <span className="term-title">test.js</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('mod-test-code', 'const chalk = require(\'chalk\');\nconsole.log(chalk.green(\'✔ Jolt & Chalk berhasil bekerja dengan sempurna!\'));')}
+                  onClick={() => handleCopy('mod-test-code', 'const chalk = require(\'chalk\');\nconsole.log(chalk.green(\'✔ Kilat & Chalk berhasil bekerja dengan sempurna!\'));')}
                 >
                   {copiedTextMap['mod-test-code'] ? 'Copied!' : 'copy'}
                 </button>
@@ -663,13 +663,13 @@ export default function App() {
                 <pre>
                   <code>
                     <span className="sh-keyword">const</span> chalk = <span className="sh-func">require</span>(<span className="sh-string">'chalk'</span>);{"\n"}
-                    <span className="sh-func">console.log</span>(chalk.green(<span className="sh-string">'✔ Jolt & Chalk berhasil bekerja dengan sempurna!'</span>));
+                    <span className="sh-func">console.log</span>(chalk.green(<span className="sh-string">'✔ Kilat & Chalk berhasil bekerja dengan sempurna!'</span>));
                   </code>
                 </pre>
               </div>
             </div>
 
-            <p>Jalankan berkas menggunakan Jolt:</p>
+            <p>Jalankan berkas menggunakan Kilat:</p>
             <div className="term-window">
               <div className="term-bar">
                 <div className="term-dots">
@@ -680,7 +680,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('mod-test-run', 'jolt run test.js')}
+                  onClick={() => handleCopy('mod-test-run', 'kilat run test.js')}
                 >
                   {copiedTextMap['mod-test-run'] ? 'Copied!' : 'copy'}
                 </button>
@@ -688,8 +688,8 @@ export default function App() {
               <div className="term-body">
                 <pre>
                   <code>
-                    <span className="sh-prompt">$</span>jolt run test.js{"\n"}
-                    <span className="sh-out" style={{ color: 'var(--secondary)' }}>✔ Jolt & Chalk berhasil bekerja dengan sempurna!</span>
+                    <span className="sh-prompt">$</span>kilat run test.js{"\n"}
+                    <span className="sh-out" style={{ color: 'var(--secondary)' }}>✔ Kilat & Chalk berhasil bekerja dengan sempurna!</span>
                   </code>
                 </pre>
               </div>
@@ -701,7 +701,7 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Roadmap</h1>
-            <p className="lede">Ke mana arah pengembangan Jolt selanjutnya. Penjelasan fitur pada setiap rencana rilis.</p>
+            <p className="lede">Ke mana arah pengembangan Kilat selanjutnya. Penjelasan fitur pada setiap rencana rilis.</p>
 
             <div className="timeline-list">
               <div className="timeline-item done">
@@ -736,7 +736,7 @@ export default function App() {
                     <span className="timeline-status active">Pengerjaan</span>
                   </div>
                   <h4 className="timeline-title">REPL Interaktif</h4>
-                  <p className="timeline-desc">Menambahkan antarmuka interaktif Jolt console langsung di dalam shell Termux untuk pengujian ekspresi JavaScript secara langsung.</p>
+                  <p className="timeline-desc">Menambahkan antarmuka interaktif Kilat console langsung di dalam shell Termux untuk pengujian ekspresi JavaScript secara langsung.</p>
                 </div>
               </div>
 
@@ -796,7 +796,7 @@ export default function App() {
                     <span className="timeline-status planned">Rencana</span>
                   </div>
                   <h4 className="timeline-title">Optimalisasi Performa Ekstrem</h4>
-                  <p className="timeline-desc">Refactoring total arsitektur runtime Jolt untuk performa eksekusi dan efisiensi memori yang ekstrem.</p>
+                  <p className="timeline-desc">Refactoring total arsitektur runtime Kilat untuk performa eksekusi dan efisiensi memori yang ekstrem.</p>
                 </div>
               </div>
             </div>
@@ -807,7 +807,7 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Changelog</h1>
-            <p className="lede">Catatan rilis dan riwayat pembaruan runtime Jolt.</p>
+            <p className="lede">Catatan rilis dan riwayat pembaruan runtime Kilat.</p>
 
             <div className="changelog-list">
               <div className="changelog-version">
@@ -821,8 +821,8 @@ export default function App() {
                   
                   <h4 className="changelog-section-name">⚡ Fitur Baru</h4>
                   <ul>
-                    <li><strong>Watch Mode (<code>--watch</code> / <code>-w</code>)</strong>: Jalankan skrip dengan <code>jolt run index.js --watch</code> untuk otomatis merestart runtime setiap kali ada berkas <code>.js</code> atau <code>.json</code> yang berubah.</li>
-                    <li><strong>Dukungan File <code>.env</code></strong>: Jolt secara otomatis membaca berkas <code>.env</code> pada direktori aktif saat startup dan memasukkannya ke variabel lingkungan sistem.</li>
+                    <li><strong>Watch Mode (<code>--watch</code> / <code>-w</code>)</strong>: Jalankan skrip dengan <code>kilat run index.js --watch</code> untuk otomatis merestart runtime setiap kali ada berkas <code>.js</code> atau <code>.json</code> yang berubah.</li>
+                    <li><strong>Dukungan File <code>.env</code></strong>: Kilat secara otomatis membaca berkas <code>.env</code> pada direktori aktif saat startup dan memasukkannya ke variabel lingkungan sistem.</li>
                   </ul>
 
                   <h4 className="changelog-section-name">📦 CommonJS & Loader</h4>
@@ -847,14 +847,14 @@ export default function App() {
                   <span className="changelog-badge">Initial Release</span>
                 </div>
                 <div className="changelog-content">
-                  <p>Rilis fondasi utama dari runtime interpreter JavaScript Jolt untuk perangkat Termux Android.</p>
+                  <p>Rilis fondasi utama dari runtime interpreter JavaScript Kilat untuk perangkat Termux Android.</p>
                   
                   <h4 className="changelog-section-name">⚡ Fitur Utama</h4>
                   <ul>
                     <li><strong>Engine Goja</strong>: Pemuatan interpreter JavaScript murni berbasis Go yang sangat cepat saat startup dibandingkan V8 Node.js pada perangkat mobile.</li>
-                    <li><strong>Centralized Package Manager (<code>jolt add</code>)</strong>: Pemasangan dependensi npm secara terpusat di direktori global pengguna (<code>~/.jolt/packages/</code>) sehingga tidak memerlukan folder <code>node_modules</code> raksasa di setiap folder proyek.</li>
+                    <li><strong>Centralized Package Manager (<code>kilat add</code>)</strong>: Pemasangan dependensi npm secara terpusat di direktori global pengguna (<code>~/.kilat/packages/</code>) sehingga tidak memerlukan folder <code>node_modules</code> raksasa di setiap folder proyek.</li>
                     <li><strong>Built-in Modules</strong>: Menyertakan modul dasar <code>console</code> (log berwarna), <code>fs</code> (akses filesystem), <code>net</code> (fetch HTTP request), dan <code>os</code> (akses environment/arguments).</li>
-                    <li><strong>Interactive CLI</strong>: Interface inisialisasi interaktif via <code>jolt init</code>.</li>
+                    <li><strong>Interactive CLI</strong>: Interface inisialisasi interaktif via <code>kilat init</code>.</li>
                   </ul>
                 </div>
               </div>
@@ -866,7 +866,7 @@ export default function App() {
         return (
           <div className="doc">
             <h1 className="doc-title">Kontribusi & Lisensi</h1>
-            <p className="lede">Mari berkolaborasi mematangkan Jolt sebagai runtime JavaScript teringan untuk Termux.</p>
+            <p className="lede">Mari berkolaborasi mematangkan Kilat sebagai runtime JavaScript teringan untuk Termux.</p>
 
             <h2 className="section-title">Cara Berkontribusi</h2>
             <p>Kami sangat menyukai kontribusi komunitas! Anda dapat berkontribusi melalui pelaporan bug, usulan fitur, perbaikan performa, maupun penyempurnaan modul. Ikuti langkah pengerjaan lokal berikut:</p>
@@ -881,7 +881,7 @@ export default function App() {
                 <span className="term-title">bash terminal</span>
                 <button 
                   className="term-copy"
-                  onClick={() => handleCopy('contribute-cl', 'git clone https://github.com/IHx-cmyk/jolt\ncd jolt\ngo mod tidy\ngo build -o jolt ./cmd/jolt')}
+                  onClick={() => handleCopy('contribute-cl', 'git clone https://github.com/IHx-cmyk/kilat\ncd kilat\ngo mod tidy\ngo build -o kilat ./cmd/kilat')}
                 >
                   {copiedTextMap['contribute-cl'] ? 'Copied!' : 'copy'}
                 </button>
@@ -890,11 +890,11 @@ export default function App() {
                 <pre>
                   <code>
                     <span className="sh-comment"># Clone hasil fork repositori Anda</span>{"\n"}
-                    <span className="sh-prompt">$</span>git clone https://github.com/IHx-cmyk/jolt{"\n"}
-                    <span className="sh-prompt">$</span>cd jolt{"\n\n"}
+                    <span className="sh-prompt">$</span>git clone https://github.com/IHx-cmyk/kilat{"\n"}
+                    <span className="sh-prompt">$</span>cd kilat{"\n\n"}
                     <span className="sh-comment"># Tidy dependencies dan compile secara lokal</span>{"\n"}
                     <span className="sh-prompt">$</span>go mod tidy{"\n"}
-                    <span className="sh-prompt">$</span>go build -o jolt ./cmd/jolt
+                    <span className="sh-prompt">$</span>go build -o kilat ./cmd/kilat
                   </code>
                 </pre>
               </div>
@@ -909,7 +909,7 @@ export default function App() {
 
             <h2 className="section-title">Lisensi Perangkat Lunak</h2>
             <p>
-              Proyek runtime Jolt dirilis di bawah lisensi terbuka <strong>MIT License</strong>. Anda bebas menggunakan, memodifikasi, mendistribusikan, dan melakukan komersialisasi perangkat lunak ini secara gratis, selama mencantumkan atribusi pembuat asli.
+              Proyek runtime Kilat dirilis di bawah lisensi terbuka <strong>MIT License</strong>. Anda bebas menggunakan, memodifikasi, mendistribusikan, dan melakukan komersialisasi perangkat lunak ini secara gratis, selama mencantumkan atribusi pembuat asli.
             </p>
           </div>
         )
@@ -929,7 +929,7 @@ export default function App() {
       <nav className="navbar">
         <div className="nav-container">
           <a href="#index" className="logo">
-            <span className="logo-spark">⚡</span> jolt <span className="logo-badge">v0.2.0</span>
+            <span className="logo-spark">⚡</span> kilat <span className="logo-badge">v0.2.0</span>
           </a>
 
           {/* Desktop nav links */}
@@ -946,7 +946,7 @@ export default function App() {
             ))}
             <li>
               <a
-                href="https://github.com/IHx-cmyk/jolt"
+                href="https://github.com/IHx-cmyk/kilat"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-github"
@@ -1002,7 +1002,7 @@ export default function App() {
           </a>
         ))}
         <a
-          href="https://github.com/IHx-cmyk/jolt"
+          href="https://github.com/IHx-cmyk/kilat"
           target="_blank"
           rel="noreferrer"
           className="mobile-link"
@@ -1045,7 +1045,7 @@ export default function App() {
             {/* Footer */}
             <footer className="footer">
               <span>Dibuat seadanya. Modal sebatang rokok dan seglintir harapan user Termux</span>
-              <span>MIT License © 2026 Jolt.</span>
+              <span>MIT License © 2026 Kilat.</span>
             </footer>
           </div>
         </main>
